@@ -1,0 +1,48 @@
+{"question": "「トランスポート（stdio・Streamable HTTP）」とは何ですか？", "kind": "seen", "term_id": "mcp-transport", "must_include": ["サブプロセス"]}
+{"question": "「stdio」はどういう意味ですか？", "kind": "alias", "term_id": "mcp-transport", "must_include": ["サブプロセス"]}
+{"question": "トランスポート（stdio・Streamable HTTP）は具体的にどのようなやり取りを担うのか？", "kind": "paraphrase", "term_id": "mcp-transport", "must_include": ["サブプロセス"]}
+{"question": "「教師ありファインチューニング（SFT）」とは何ですか？", "kind": "seen", "term_id": "sft", "must_include": ["模範回答"]}
+{"question": "「SFT」はどういう意味ですか？", "kind": "alias", "term_id": "sft", "must_include": ["模範回答"]}
+{"question": "教師ありファインチューニング（SFT）ではモデルに何を学習させることで指示に従う能力を高めるのか教えてください。", "kind": "paraphrase", "term_id": "sft", "must_include": ["模範回答"]}
+{"question": "「answer.md」とは何ですか？", "kind": "seen", "term_id": "answer-md", "must_include": ["AIE2026"]}
+{"question": "「解答ファイル」はどういう意味ですか？", "kind": "alias", "term_id": "answer-md", "must_include": ["AIE2026"]}
+{"question": "answer.md というファイルは講座のどの作業に用いられますか？", "kind": "paraphrase", "term_id": "answer-md", "must_include": ["AIE2026"]}
+{"question": "「LoRA」とは何ですか？", "kind": "seen", "term_id": "lora", "must_include": ["低ランク行列"]}
+{"question": "「Low-Rank Adaptation」はどういう意味ですか？", "kind": "alias", "term_id": "lora", "must_include": ["低ランク行列"]}
+{"question": "LoRA を用いることで実現できるパラメータ効率化の仕組みは？", "kind": "paraphrase", "term_id": "lora", "must_include": ["低ランク行列"]}
+{"question": "「LLM（大規模言語モデル）」とは何ですか？", "kind": "seen", "term_id": "llm", "must_include": ["トークンを予測"]}
+{"question": "「大規模言語モデル」はどういう意味ですか？", "kind": "alias", "term_id": "llm", "must_include": ["トークンを予測"]}
+{"question": "LLM（大規模言語モデル）はどんな仕組みで文章を生成するのか？", "kind": "paraphrase", "term_id": "llm", "must_include": ["トークンを予測"]}
+{"question": "「fork」とは何ですか？", "kind": "seen", "term_id": "fork", "must_include": ["講座repo"]}
+{"question": "「フォーク」はどういう意味ですか？", "kind": "alias", "term_id": "fork", "must_include": ["講座repo"]}
+{"question": "fork という操作は具体的にどういう行為を指しますか？", "kind": "paraphrase", "term_id": "fork", "must_include": ["講座repo"]}
+{"question": "「過学習」とは何ですか？", "kind": "seen", "term_id": "overfitting", "must_include": ["過度に適合"]}
+{"question": "「overfitting」はどういう意味ですか？", "kind": "alias", "term_id": "overfitting", "must_include": ["過度に適合"]}
+{"question": "過学習が起きたときのモデルの特徴を教えてください。", "kind": "paraphrase", "term_id": "overfitting", "must_include": ["過度に適合"]}
+{"question": "「エポック」とは何ですか？", "kind": "seen", "term_id": "epoch", "must_include": ["1エポックと数える"]}
+{"question": "「epoch」はどういう意味ですか？", "kind": "alias", "term_id": "epoch", "must_include": ["1エポックと数える"]}
+{"question": "エポックは具体的にどの範囲の学習を指すのか教えてください。", "kind": "paraphrase", "term_id": "epoch", "must_include": ["1エポックと数える"]}
+{"question": "「PEFT」とは何ですか？", "kind": "seen", "term_id": "peft", "must_include": ["LoRAが代表例"]}
+{"question": "「Parameter-Efficient Fine-Tuning」はどういう意味ですか？", "kind": "alias", "term_id": "peft", "must_include": ["LoRAが代表例"]}
+{"question": "PEFT を導入することで、学習と保存にどのような影響が期待できますか？", "kind": "paraphrase", "term_id": "peft", "must_include": ["LoRAが代表例"]}
+{"question": "「GitHub Copilot」とは何ですか？", "kind": "seen", "term_id": "github-copilot", "must_include": ["エージェントモード"]}
+{"question": "「Copilot」はどういう意味ですか？", "kind": "alias", "term_id": "github-copilot", "must_include": ["エージェントモード"]}
+{"question": "GitHub Copilot は具体的にどんなことができるツールですか？", "kind": "paraphrase", "term_id": "github-copilot", "must_include": ["エージェントモード"]}
+{"question": "「学習率」とは何ですか？", "kind": "seen", "term_id": "learning-rate", "must_include": ["1回の更新"]}
+{"question": "「learning rate」はどういう意味ですか？", "kind": "alias", "term_id": "learning-rate", "must_include": ["1回の更新"]}
+{"question": "学習率という用語の意味を具体的に教えてください", "kind": "paraphrase", "term_id": "learning-rate", "must_include": ["1回の更新"]}
+{"question": "「事前学習」とは何ですか？", "kind": "seen", "term_id": "pretraining", "must_include": ["次のトークン"]}
+{"question": "「pre-training」はどういう意味ですか？", "kind": "alias", "term_id": "pretraining", "must_include": ["次のトークン"]}
+{"question": "事前学習ではモデルにどのようなタスクが課されるのですか", "kind": "paraphrase", "term_id": "pretraining", "must_include": ["次のトークン"]}
+{"question": "レイテンシとはソフトウェア開発やAIサービスで何を表しますか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "ベクトルデータベースとはどのようなデータベースですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "RAGとは何の略でどのような仕組みですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "勾配消失問題とは深層学習で何を指しますか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "バッチ処理とはソフトウェア開発でどのような処理ですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "CI/CDとは何の略で何を意味しますか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "デバッグとはソフトウェア開発で何をする作業ですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "リファクタリングとはコードに対して何を行うことを指しますか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "アジャイル開発とはどのような開発手法ですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "テスト駆動開発とはどのような開発アプローチですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "モジュール性とはソフトウェア設計で何を重視する概念ですか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
+{"question": "コンテナ化とはソフトウェア開発で何を意味しますか？", "kind": "unknown", "term_id": null, "must_include": ["用語集にありません"]}
