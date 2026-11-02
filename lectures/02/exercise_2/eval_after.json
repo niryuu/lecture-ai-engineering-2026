@@ -1,0 +1,444 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 48,
+    "format_rate": 1.0,
+    "content_rate": 0.0625,
+    "both_rate": 0.0625,
+    "seconds": 124.5
+  },
+  "rows": [
+    {
+      "question": "「トランスポート（stdio・Streamable HTTP）」とは何ですか？",
+      "raw": "モデルとユーザーの間の通信を扱うための標準の通信プロンプト。モデルはテキストを、ユーザーはファイルやツールの結果を渡す。Claude Desktopではstdio、Claude WebではStreamable HTTP。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「stdio」はどういう意味ですか？",
+      "raw": "Pythonの標準入力と標準出力。プログラムが読み込むと出力する、という役割分担。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "トランスポート（stdio・Streamable HTTP）は具体的にどのようなやり取りを担うのか？",
+      "raw": "モデルの出力を、クライアントからサーバーへ渡すための通信。モデルが出力するテキストを、ツールが呼び出そうとする入力（ツール名・引数・出力形式）と、サーバーが受け取る出力（ツール名・引数・出力形式）を、同じ通信プロンプトで繋ぐ。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「教師ありファインチューニング（SFT）」とは何ですか？",
+      "raw": "入力と出力のペアを学習する手法。質問の形式や出力の形式を教えるため、結果の安定性と評価が容易になる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「SFT」はどういう意味ですか？",
+      "raw": "入力データと、その入力と出力のペアを学習させる手法。モデルが特定の役割や形式を学ぶために使う。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "教師ありファインチューニング（SFT）ではモデルに何を学習させることで指示に従う能力を高めるのか教えてください。",
+      "raw": "入力と出力のペア（例：質問と答え）をモデルに与え、モデルが同じ入力に対して同じ出力を返すように学習させること。質問の文脈や出力の形式に敏感になり、指示に従う能力が上がる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「answer.md」とは何ですか？",
+      "raw": "LLMが質問に答えるための出力ファイル。質問の理解程度と、回答の質に大きく左右される。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「解答ファイル」はどういう意味ですか？",
+      "raw": "LLMが受け取る出力のファイル。Pydantic AIでは `model.generate()` の戻り値をファイルに書き込むことで、モデルが返したJSONをファイルとして保存できる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "answer.md というファイルは講座のどの作業に用いられますか？",
+      "raw": "各回の作業（質問・回答・コード・レポートなど）について、その回の作業番号（例：01_01）と、その回の作業の出力（回答、コード、レポートの出力）を記録するファイル。出力のフォーマットや、同じ作業番号で同じ出力を返すか、出力の順序を決めるか、は自分で決める。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「LoRA」とは何ですか？",
+      "raw": "学習データでモデルを軽量化するための低精度の学習手法。学習する重みを、学習しない重みを2つの列の合計で分ける。学習する列をLoRAのA、学習しない列をLoRAのBとみなし、Aを小さな行列として更新し、Bを固定する。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「Low-Rank Adaptation」はどういう意味ですか？",
+      "raw": "モデルの重みを、学習するデータや入力・出力の構造から来る小さな行列（低ランク）に置き換えること。学習するデータや入力・出力の規模が小さいとき、重みを小さくして学習する。学習するデータや入力・出力の規模が大きいとき、重みをそのまま使う。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "LoRA を用いることで実現できるパラメータ効率化の仕組みは？",
+      "raw": "学習率を下げたり、重みを減らすために使う小さなパラメータを学習する手法。重みを増やしすぎると学習が不安定になり、減らすすぎると学習が進まない。LoRA は重みを増やしすぎないため、学習が安定しやすい。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「LLM（大規模言語モデル）」とは何ですか？",
+      "raw": "大量のテキストで学習し、入力に足した質問や指示に従う出力を返すモデル。質問応答、コード生成、文章生成、検索など多くのタスクを、指示を変えて行う。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「大規模言語モデル」はどういう意味ですか？",
+      "raw": "大量のテキストで学習したモデル。質問応答や文章生成、コード実行など多くのタスクをこなせる。ツールの使用や外部データの読み込みも可能。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "LLM（大規模言語モデル）はどんな仕組みで文章を生成するのか？",
+      "raw": "入力文を、トークンレベルで分割し、各トークンの期待された出力（次の単語）を予測し、予測結果を出力文として追加して元の文と出力文を結合して出力する。モデルのアーキテクチャやデータセット、ロジックの設計次第で、出力の質や形式が大きく変わる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「fork」とは何ですか？",
+      "raw": "自分のrepoを別のrepoにコピーする作業。同じ機能のコードを2つに分けて、互いにforkして作業できる。本講座ではforkして自分のrepoに渡す。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「フォーク」はどういう意味ですか？",
+      "raw": "自分のrepoを別のrepoに引き継ぐこと。自分のコードを公開する前に使う。公開するときは fork して fork したrepoをclone する。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "fork という操作は具体的にどういう行為を指しますか？",
+      "raw": "自分のrepoを別のrepoにコピーする操作。同じコードを2つに分割し、自分のforkは自分の使用環境、他者のforkは他者の使用環境にする。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「過学習」とは何ですか？",
+      "raw": "学習データに過ぎないデータでモデルが学習し、未知の入力に対して適切な答えを返さず、評価で過学習を示す状態。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「overfitting」はどういう意味ですか？",
+      "raw": "学習データに過ぎないモデル。学習した特徴は、実際のデータでよくない値や外れ値に転嫁する。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "過学習が起きたときのモデルの特徴を教えてください。",
+      "raw": "学習データに過ぎない。新しいデータでよくならない。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「エポック」とは何ですか？",
+      "raw": "学習データの総数。学習する回数を数える基準。学習率を上げるほど、同じデータで学習する回数を増やし、エポック数が増える。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「epoch」はどういう意味ですか？",
+      "raw": "1回の学習サイクル（データ処理＋更新）を指す。学習率を上げすぎると過学習しやすくなる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "エポックは具体的にどの範囲の学習を指すのか教えてください。",
+      "raw": "1回の学習サイクルで学習パラメータを更新し、テストデータで評価した結果を元に次の学習サイクルの学習率を決めるまでの間隔。学習率を上げるほどエポック数を減らせる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「PEFT」とは何ですか？",
+      "raw": "モデルの重みを小さなパラメータに収める技術。学習するデータと評価するデータが同じとき、評価するデータはモデルの1%〜10%に留めるだけで、結果は同じになる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「Parameter-Efficient Fine-Tuning」はどういう意味ですか？",
+      "raw": "モデルの学習に必要なパラメータを減らすことで、メモリや計算コストを節約できる手法。Pydantic AIでは `LoRA`を適用する `LoRAFineTuner`の `learning_rate`を小さくしたり、学習率を0.001にしたりする。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "PEFT を導入することで、学習と保存にどのような影響が期待できますか？",
+      "raw": "学習データに依存しない小さなパラメータをモデルに付けること。学習するデータは増えないので保存も増えない。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「GitHub Copilot」とは何ですか？",
+      "raw": "GitHubのAIアシスタント。コードやメモをCopilotに渡すだけで、Copilotがその内容を元にコードを生成したり、検索したり、ツールを呼んだりできる。無料枠には生成数の上限があり、利用規約に違反しない程度で使う。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「Copilot」はどういう意味ですか？",
+      "raw": "Claude DesktopのAIエージェント。Copilot ChatはPCからアプリに渡す、Copilot CodeはアプリからPCに渡す。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "GitHub Copilot は具体的にどんなことができるツールですか？",
+      "raw": "CopilotがGitHubに接続できるツール。モデルが質問するときに、GitHubから必要なファイルや機能（コード、ツールの実行、ファイルの編集など）をモデルから選択し、モデルが選択したものを元にコードを生成したり、ツールを呼び出して実行したりできる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「学習率」とは何ですか？",
+      "raw": "1回の更新でパラメータをどれだけ動かすかを決める超参数。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「learning rate」はどういう意味ですか？",
+      "raw": "1回の更新でパラメータをどれだけ動かすかを決める超参数。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "学習率という用語の意味を具体的に教えてください",
+      "raw": "1回の更新でパラメータをどれだけ動かすかを決める超参数。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「事前学習」とは何ですか？",
+      "raw": "大量のテキストデータを使って、モデルが学習する初期状態。教えるデータ（例：質問と答え）よりも、学習データ（例：会話履歴や文章）の方が重要になる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "「pre-training」はどういう意味ですか？",
+      "raw": "大規模言語モデルを、大量のテキストで学習させるための初期段階。重みを学習データに渡すことで、入力と出力の間の関係性を学ぶ。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "事前学習ではモデルにどのようなタスクが課されるのですか",
+      "raw": "大量のテキストで学習させるため、質問応答、文章の検索、コードの読解、フォーマットされた出力の生成など、多くのタスクを一度にこなせるように設計される。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "レイテンシとはソフトウェア開発やAIサービスで何を表しますか？",
+      "raw": "モデルの出力や他の処理の結果を、その時間分あたりに安定して返すために必要な時間の差。大きく分けて2つのタイプがある。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "ベクトルデータベースとはどのようなデータベースですか？",
+      "raw": "データの型や構造を、同じ種類のデータに統一する仕組み。MySQLのMCPサーバーは、MCPサーバーとして登録したベクトルデータベース。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "RAGとは何の略でどのような仕組みですか？",
+      "raw": "LLMが外部の知識やデータに依存しないように、質問をモデルに渡すだけで結果を得る仕組み。モデルが直接アクセスしないように、RAGエージェントが外部のデータ（ファイル、データベース、ツールの結果）をモデルに渡す。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "勾配消失問題とは深層学習で何を指しますか？",
+      "raw": "モデルが学習した知識や構造を、入力データや入力形式から外すこと。入力形式が変わる（例：テキストから画像、質問から答え、入力から出力）ときれียงが起き、結果が不安定になる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "バッチ処理とはソフトウェア開発でどのような処理ですか？",
+      "raw": "複数の操作を1回の呼び出しで実行し、結果を1回のAPIで返す手法。例：ファイルの読み書き、データベースの更新、ログの書き込み。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "CI/CDとは何の略で何を意味しますか？",
+      "raw": "開発環境から公開環境への変更を自動化する仕組み。開発中の変更を自動でテストし、結果が良ければ公開環境へ、結果が不良であれば返ってすぐに公開環境から開発環境へ戻す。公開環境から公開への変更も同じ仕組みで自動化できる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "デバッグとはソフトウェア開発で何をする作業ですか？",
+      "raw": "コードの挙動やエラーを、特定の条件や入力で支えるために、ツールや環境変数を使って観察・修正する作業。本講座では「環境変数で設定したテストモード」で、特定の入力で動くようにする。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "リファクタリングとはコードに対して何を行うことを指しますか？",
+      "raw": "コードの重複や重複した部分を共有して、同じ機能の多くを1つのファイルにまとめること。同じコードを1つのファイルにまとめるほど、コードの重複が減り、共有度が増し、コードの可読性と維持性が向上する。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "アジャイル開発とはどのような開発手法ですか？",
+      "raw": "小さなステップで成果物を取得し、評価・修正・進めるサイクルを繰り返す開発の哲学。事前準備やツール、環境設定、テスト、レビュー、コミット、プルリクエスト、PR、メンテリングなど、多くの作業を小さな変更でまとめる。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "テスト駆動開発とはどのような開発アプローチですか？",
+      "raw": "コードの書き方や挙動をテストする前に、実際に動くコードを生成して、そのコードをテストする手法。本講座では「テストツール」とは何ですか？",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "モジュール性とはソフトウェア設計で何を重視する概念ですか？",
+      "raw": "コードをまとめるための枠組み。同じ機能やデータ構造を同じファイルやクラスで扱うことで、変更を回し、影響範囲を絞る。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "コンテナ化とはソフトウェア開発で何を意味しますか？",
+      "raw": "開発環境と運用環境を同じ空間に分離し、同じコードをどの環境でも同じ結果を出す仕組み。MCPサーバーは例として、MCPクライアントが起動する環境を同じコンテナに収める。",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}
