@@ -136,7 +136,6 @@ def search(query: str) -> list[dict]:
             FROM chunks ORDER BY distance, page_id LIMIT ?
         """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
         hits = [dict(row) for row in rows]
-        return hits
 
     pages = load_pages(RAG_SOURCE)
     pages_by_document = defaultdict(list)
